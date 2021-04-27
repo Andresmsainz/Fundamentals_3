@@ -10,8 +10,8 @@ namespace Fundamentals_3
             Console.WriteLine("Fundamentals Part 3!");
             bool bTryParse = false;
             bool bConstants = false;
-            bool bStringManuplation1 = true;
-
+            bool bStringManuplation1 = false;
+            bool bStringManuplation2 = true;
             //Try Parse
             if (bTryParse == true)
             {
@@ -94,7 +94,35 @@ namespace Fundamentals_3
                 Console.WriteLine("Skipping String Manipulation #1 per Configuration");
             }
 
-            //Next Section
+            //String Manipulation 2 Section
+            if (bStringManuplation2 == true)
+            {
+                Console.WriteLine("String Manipulation 2!");
+
+                string sTvShow = "Game of Thrones";
+
+                //Index of
+                Console.WriteLine("The entire name of the tv show is " + sTvShow);
+                Console.WriteLine("The index of o is " + sTvShow.IndexOf("o"));
+
+                //Last Index of
+                Console.WriteLine("The last index of o is " + sTvShow.LastIndexOf("o"));
+
+                //Substring
+                Console.WriteLine("The substring of index 8 with a length of 7 is " + sTvShow.Substring(8,7));
+
+                //Remove
+                Console.WriteLine("The removal of index 8 with a length of 7 is " + sTvShow.Remove(8,7));
+
+                //Insert
+                Console.WriteLine("The insert of is awesome " + sTvShow.Insert(15," is awesome!"));
+
+            }
+            else
+            {
+                Console.WriteLine("Skipping String Manipulation #2 per Configuration");
+            }
+
             //Next Section
             //Next Section
             //Next Section
