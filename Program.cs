@@ -9,7 +9,8 @@ namespace Fundamentals_3
             Console.WriteLine("Hello World!");
             Console.WriteLine("Fundamentals Part 3!");
             bool bTryParse = false;
-            bool bConstants = true;
+            bool bConstants = false;
+            bool bStringManuplation1 = true;
 
             //Try Parse
             if (bTryParse == true)
@@ -40,6 +41,8 @@ namespace Fundamentals_3
                 const double dblGravityForce = 9.8;
                 const double dblPI = 3.14159265359;
 
+                // dblPI = 1; (Trying to change will cause error)
+
                 Console.WriteLine("Gravity Force is " + dblGravityForce + " & PI is " + dblPI);
             }
             else
@@ -47,7 +50,50 @@ namespace Fundamentals_3
                 Console.WriteLine("Skipping Constants per Configuration");
             }
 
-            //Next Section
+            //String Manipulation 1 Section
+            if (bStringManuplation1 == true)
+            {
+                Console.WriteLine("String Manipulation 1!");
+                string sMovieName = "lord of the rings";
+                //Indexes
+                Console.WriteLine("The entire name of the movie is " + sMovieName);
+                Console.WriteLine("Index 0 is " + sMovieName[0]);
+                Console.WriteLine("Index 5 is " + sMovieName[5]);
+                Console.WriteLine("Index 5 - 16 is " + sMovieName[5..17]);
+
+                //Trim
+                sMovieName = "    lord of the rings     ";
+                Console.WriteLine("The entire name of the movie is " + sMovieName);
+                Console.WriteLine("The trimmed name of the movie is " + sMovieName.Trim());
+
+                //Upper Case
+                sMovieName = "lord of the rings";
+                Console.WriteLine("The entire name of the movie is " + sMovieName);
+                Console.WriteLine("The upper case name of the movie is " + sMovieName.ToUpper());
+
+                //Lower Case
+                sMovieName = "LORD OF THE RINGS";
+                Console.WriteLine("The entire name of the movie is " + sMovieName);
+                Console.WriteLine("The lower case name of the movie is " + sMovieName.ToLower());
+
+                //Length
+                sMovieName = "lord of the rings";
+                Console.WriteLine("The entire name of the movie is " + sMovieName);
+                Console.WriteLine("The length of the name of the movie is " + sMovieName.Length);
+
+                //Replace
+                sMovieName = "lord of the rings";
+                Console.WriteLine("The entire name of the movie is " + sMovieName);
+                sMovieName = sMovieName.Replace("l", "L");
+                sMovieName = sMovieName.Replace("rings", "Rings");
+
+                Console.WriteLine("The replaced name of the movie is " + sMovieName);
+            }
+            else
+            {
+                Console.WriteLine("Skipping String Manipulation #1 per Configuration");
+            }
+
             //Next Section
             //Next Section
             //Next Section
