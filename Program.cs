@@ -8,10 +8,15 @@ namespace Fundamentals_3
         {
             Console.WriteLine("Hello World!");
             Console.WriteLine("Fundamentals Part 3!");
+
+            //My Config
             bool bTryParse = false;
             bool bConstants = false;
             bool bStringManuplation1 = false;
-            bool bStringManuplation2 = true;
+            bool bStringManuplation2 = false;
+            bool bStringExercise = true;
+
+
             //Try Parse
             if (bTryParse == true)
             {
@@ -123,7 +128,25 @@ namespace Fundamentals_3
                 Console.WriteLine("Skipping String Manipulation #2 per Configuration");
             }
 
-            //Next Section
+            //String Exercies
+            if (bStringExercise == true)
+            {
+                Console.WriteLine("String Exercises!");
+
+                string sTvShow = "Game of Thrones     ";
+                string sSeasonOne = " - Season 1";
+                string sNewName = "";
+
+                //Insert
+                sNewName = sTvShow.Insert(sTvShow.Trim() .Length,sSeasonOne);
+                Console.WriteLine("The edited name is " + sNewName);
+
+            }
+            else
+            {
+                Console.WriteLine("Skipping String Exercises per Configuration");
+            }
+
             //Next Section
             //Next Section
             //Next Section
