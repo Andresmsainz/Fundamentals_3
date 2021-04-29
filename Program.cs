@@ -14,8 +14,8 @@ namespace Fundamentals_3
             bool bConstants = false;
             bool bStringManuplation1 = false;
             bool bStringManuplation2 = false;
-            bool bStringExercise = true;
-
+            bool bStringExercise = false;
+            bool bEscapeSequences = true;
 
             //Try Parse
             if (bTryParse == true)
@@ -147,7 +147,28 @@ namespace Fundamentals_3
                 Console.WriteLine("Skipping String Exercises per Configuration");
             }
 
-            //Next Section
+            //Escape Sequences Section
+
+            if (bEscapeSequences == true)
+            {
+                Console.WriteLine("Escape Sequences!");
+
+                //Displays Double Quotes
+                Console.WriteLine("And Jon Said \"Bend a Knee\"!");
+                //Displays Back Slash
+                Console.WriteLine("The file is in D:\\Movies\\");
+                //Displays Tab
+                Console.WriteLine("\t\t 2x TABS");
+                //Displays New Line
+                Console.WriteLine("A\nNew\nLine");
+                //Makes an alarm
+                Console.WriteLine("Alarm! \a");
+            }
+            else
+            {
+                Console.WriteLine("Skipping Escape Sequences per Configuration");
+            }
+
             //Next Section
             //Next Section
 
