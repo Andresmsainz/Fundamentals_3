@@ -16,7 +16,8 @@ namespace Fundamentals_3
             bool bStringManuplation2 = false;
             bool bStringExercise = false;
             bool bEscapeSequences = false;
-            bool bStringInterpolation = true;
+            bool bStringInterpolation = false;
+            bool bForLoops = true;
 
             //Try Parse
             if (bTryParse == true)
@@ -185,9 +186,31 @@ namespace Fundamentals_3
                 Console.WriteLine("Skipping String Interpolation per Configuration");
             }
 
-            //Next Section
+            //For Loops Section
+            if (bForLoops == true)
+            {
+                Console.WriteLine("For Loops Section");
+                for (int i=1;i<=10;i++)
+                {
+                    Console.WriteLine("C# Rocks x " + i);  
+                }
+                //Reverse
+                for (int i = 10; i >= 1; i--)
+                {
+                    Console.WriteLine("C# Rules x " + i);
+                    if (i == 5)
+                    {
+                        Console.WriteLine("Breaking at " + i);
+                        break;
+                    }
+                        
+                }
 
-
+            }
+            else
+            {
+                Console.WriteLine("Skipping For Loops per Configuration");
+            }
         }
     }
 }
