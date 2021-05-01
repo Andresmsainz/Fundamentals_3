@@ -15,7 +15,8 @@ namespace Fundamentals_3
             bool bStringManuplation1 = false;
             bool bStringManuplation2 = false;
             bool bStringExercise = false;
-            bool bEscapeSequences = true;
+            bool bEscapeSequences = false;
+            bool bStringInterpolation = true;
 
             //Try Parse
             if (bTryParse == true)
@@ -148,7 +149,6 @@ namespace Fundamentals_3
             }
 
             //Escape Sequences Section
-
             if (bEscapeSequences == true)
             {
                 Console.WriteLine("Escape Sequences!");
@@ -161,7 +161,7 @@ namespace Fundamentals_3
                 Console.WriteLine("\t\t 2x TABS");
                 //Displays New Line
                 Console.WriteLine("A\nNew\nLine");
-                //Makes an alarm
+                //Makes an alarm sound
                 Console.WriteLine("Alarm! \a");
             }
             else
@@ -169,7 +169,22 @@ namespace Fundamentals_3
                 Console.WriteLine("Skipping Escape Sequences per Configuration");
             }
 
-            //Next Section
+            //String Interpolation Section
+            if (bStringInterpolation == true)
+            {
+                Console.WriteLine("What is your name?");
+                string name = "";
+                name = Console.ReadLine();
+
+                Console.WriteLine("Nice to see you, " + name); //Variable
+                Console.WriteLine("Nice to see you again, {0}" , name); //Place Holder
+                Console.WriteLine($"Nice to see you once again, {name}"); //String Interpolation
+            }
+            else
+            {
+                Console.WriteLine("Skipping String Interpolation per Configuration");
+            }
+
             //Next Section
 
 
