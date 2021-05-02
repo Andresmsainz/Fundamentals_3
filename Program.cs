@@ -18,7 +18,9 @@ namespace Fundamentals_3
             bool bEscapeSequences = false;
             bool bStringInterpolation = false;
             bool bForLoops = false;
-            bool bWhileLoops = true;
+            bool bWhileLoops = false;
+            bool bNestedLoops = true;
+
 
             //Try Parse
             if (bTryParse == true)
@@ -246,6 +248,29 @@ namespace Fundamentals_3
             {
                 Console.WriteLine("Skipping While Loops per Configuration");
             }
+
+
+            //Nested Loops Section
+            if (bNestedLoops == true)
+            {
+                Console.WriteLine("Nested Loops Section");
+                for (int i=1;i<=10;i++)
+                {
+                    //Console.WriteLine("First loop i = " + i);
+                    for(int j=1;j<=10;j++)
+                    {
+                        Console.Write("0");
+                        //Console.WriteLine("Second loop j = " + j);
+                    }
+                    Console.WriteLine();
+                }
+                
+            }
+            else
+            {
+                Console.WriteLine("Skipping While Loops per Configuration");
+            }
+
 
         }
     }
