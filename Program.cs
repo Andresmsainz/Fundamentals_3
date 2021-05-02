@@ -17,7 +17,8 @@ namespace Fundamentals_3
             bool bStringExercise = false;
             bool bEscapeSequences = false;
             bool bStringInterpolation = false;
-            bool bForLoops = true;
+            bool bForLoops = false;
+            bool bWhileLoops = true;
 
             //Try Parse
             if (bTryParse == true)
@@ -211,6 +212,41 @@ namespace Fundamentals_3
             {
                 Console.WriteLine("Skipping For Loops per Configuration");
             }
+
+
+            //While Loops Section
+            if (bWhileLoops == true)
+            {
+                Console.WriteLine("While Loops Section");
+                int x = 1;
+
+                while (x <= 10)
+                {
+                    Console.WriteLine("While Loop... C# Rules x " + x);
+                    x++;
+                }
+
+                x = 10;
+                while (x >= 1)
+                {
+                    Console.WriteLine("Rev While Loop... C# Rules x " + x);
+                    x--;
+                }
+
+                Console.WriteLine("Do While Loops Section");
+                x = 1;
+
+                do
+                {
+                    Console.WriteLine("Do While Loop... Line " + x);
+                    x++;
+                } while (x <= 10);
+            }
+            else
+            {
+                Console.WriteLine("Skipping While Loops per Configuration");
+            }
+
         }
     }
 }
