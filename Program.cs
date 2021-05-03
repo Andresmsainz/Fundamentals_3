@@ -23,8 +23,8 @@ namespace Fundamentals_3
             bool bLoopsExercise = false;
             bool bMath1 = false;
             bool bMath2 = false;
-            bool bRandomNumbers = true;
-
+            bool bRandomNumbers = false;
+            bool bArrays = true;
 
             //Try Parse
             if (bTryParse == true)
@@ -379,7 +379,30 @@ namespace Fundamentals_3
             }
 
 
-            //New Section
+            //Arrays Section
+            if (bArrays == true)
+            {
+                Console.WriteLine("Arrays Section");
+                int[] numbers = new int[5] {1,10,100,1000,10000 };
+
+                for (int i = 0; i < numbers.Length; i++)
+                {
+                    Console.WriteLine("Numbers element #" + i + " = " + numbers[i]);
+                }
+
+                string[] weekDays = new string[7] { "Sun","Mon","Tue","Wed","Thu","Fri","Sat" };
+
+                foreach(var name in weekDays)
+                {
+                    Console.WriteLine("For Each Day = " + name);
+                }
+
+            }
+            else
+            {
+                Console.WriteLine("Skipping Arrays per Configuration");
+            }
+
             //New Section
             //New Section
             //New Section
