@@ -21,8 +21,8 @@ namespace Fundamentals_3
             bool bWhileLoops = false;
             bool bNestedLoops = false;
             bool bLoopsExercise = false;
-            bool bMath1 = true;
-
+            bool bMath1 = false;
+            bool bMath2 = true;
 
 
             //Try Parse
@@ -328,7 +328,31 @@ namespace Fundamentals_3
                 Console.WriteLine("Skipping Math #1 per Configuration");
             }
 
-            //New Section
+            //Math #2 Section
+            if (bMath2 == true)
+            {
+                Console.WriteLine("Math #2 Section");
+
+                int x = 9;
+                int y = 4;
+
+                //Max
+                Console.WriteLine("Max = " + Math.Max(x, y));
+                //Min
+                Console.WriteLine("Min = " + Math.Min(x, y));
+                //sqrt
+                Console.WriteLine("SQRT of " + x + " = " + Math.Sqrt(x));
+                Console.WriteLine("SQRT of " + y + " = " + Math.Sqrt(y));
+                //pow
+                Console.WriteLine("Pow of " + x + " to the " + y + " power  = " + Math.Pow(x,y));
+                //PI
+                Console.WriteLine("PI = " + Math.PI);
+            }
+            else
+            {
+                Console.WriteLine("Skipping Math #2 per Configuration");
+            }
+
             //New Section
             //New Section
             //New Section
