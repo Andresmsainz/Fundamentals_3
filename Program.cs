@@ -24,7 +24,8 @@ namespace Fundamentals_3
             bool bMath1 = false;
             bool bMath2 = false;
             bool bRandomNumbers = false;
-            bool bArrays = true;
+            bool bArrays = false;
+            bool bAssignments = true;
 
             //Try Parse
             if (bTryParse == true)
@@ -403,9 +404,70 @@ namespace Fundamentals_3
                 Console.WriteLine("Skipping Arrays per Configuration");
             }
 
-            //New Section
-            //New Section
-            //New Section
+            //Assignments Section
+            if (bAssignments == true)
+            {
+                Console.WriteLine("Assignments Section");
+                Console.WriteLine("Assignment #4 Upside Down Triangle");
+
+                for (int i = 16; i >= 1; i--)
+                {
+                    for (int j = 1; j <= i; j++)
+                    {
+                        Console.Write("0");
+                    }
+                    Console.WriteLine();
+                }
+
+                Console.WriteLine("Assignment #5 Random Month with Days");
+                //First thing we need is a random number between 1 & 12
+                Random rand = new Random();
+                int x = 0;
+
+                x = rand.Next(1, 13);
+                //Console.WriteLine("Month = " + x);
+
+                //Now I need to link the number to the month
+                string[] Months = new string[12] {"January","February","March","April","May","June","July","August","September","October","November","December"};
+                //Console.WriteLine("Month = " + Months[x-1]);
+
+                //Let's get the number of days
+                int Year = 2021;
+                int days = 0;
+
+                days = DateTime.DaysInMonth(Year, x);
+                //Console.WriteLine("Days = " + days);
+
+                Console.WriteLine("Random Month = " + Months[x - 1] + " - " + days + " days");
+
+                Console.WriteLine("Assignment #6 Dice Roller");
+                int iResult = 0;
+                string sResp = "";
+                
+
+                do
+                {
+                    //Console Work
+                    Console.WriteLine("Roll Dice (yes or no)");
+                    sResp = Console.ReadLine();
+                    sResp = sResp.ToLower();
+                    //Read Response
+                    if (sResp == "yes")
+                    {
+                        //Roll Dice
+                        iResult = rand.Next(1, 7);
+                        Console.WriteLine("New Dice = " + iResult);
+                    }
+                    //Loop until we get the no
+                } while (sResp != "no");
+                
+
+
+            }
+            else
+            {
+                Console.WriteLine("Skipping Assignments per Configuration");
+            }
         }
     }
 }
