@@ -22,7 +22,8 @@ namespace Fundamentals_3
             bool bNestedLoops = false;
             bool bLoopsExercise = false;
             bool bMath1 = false;
-            bool bMath2 = true;
+            bool bMath2 = false;
+            bool bRandomNumbers = true;
 
 
             //Try Parse
@@ -353,7 +354,31 @@ namespace Fundamentals_3
                 Console.WriteLine("Skipping Math #2 per Configuration");
             }
 
-            //New Section
+            //Random Numbers Section
+            if (bRandomNumbers == true)
+            {
+                Console.WriteLine("Random Numbers Section");
+
+                Random rand = new Random();
+                int x = 0;
+
+                x = rand.Next(1,7);
+                Console.WriteLine("Dice says " + x);
+
+                x = rand.Next(1, 13);
+                Console.WriteLine("Month says " + x);
+
+                double y = 0;
+                y = rand.NextDouble() *3;
+                Console.WriteLine("Random Double = " + y);
+                Console.WriteLine("Random Rounded Double = " + Math.Round(y,2));
+            }
+            else
+            {
+                Console.WriteLine("Skipping Random Numbers per Configuration");
+            }
+
+
             //New Section
             //New Section
             //New Section
