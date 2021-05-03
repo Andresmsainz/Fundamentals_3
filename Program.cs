@@ -20,7 +20,10 @@ namespace Fundamentals_3
             bool bForLoops = false;
             bool bWhileLoops = false;
             bool bNestedLoops = false;
-            bool bLoopsExercise = true;
+            bool bLoopsExercise = false;
+            bool bMath1 = true;
+
+
 
             //Try Parse
             if (bTryParse == true)
@@ -292,21 +295,45 @@ namespace Fundamentals_3
 
                 for (int i = 1; i <= 10; i++)
                 {
-                    //Console.WriteLine("First loop i = " + i);
                     for (int j = 1; j <= i; j++)
                     {
                         Console.Write("0");
-                        //Console.WriteLine("Second loop j = " + j);
                     }
                     Console.WriteLine();
                 }
-
-
             }
             else
             {
                 Console.WriteLine("Skipping Loops Exercise per Configuration");
             }
+
+            //Math #1 Section
+            if (bMath1 == true)
+            {
+                Console.WriteLine("Math #1 Section");
+
+                double x = 4.66;
+
+                //ceiling
+                Console.WriteLine("Ceiling of " + x + " is " + Math.Ceiling(x));
+                //floor
+                Console.WriteLine("Floor of " + x + " is " + Math.Floor(x));
+                //round
+                Console.WriteLine("Round of " + x + " is " + Math.Round(x,1));
+                //truncate
+                Console.WriteLine("Truncate of " + x + " is " + Math.Truncate(x));
+            }
+            else
+            {
+                Console.WriteLine("Skipping Math #1 per Configuration");
+            }
+
+            //New Section
+            //New Section
+            //New Section
+            //New Section
+            //New Section
+            //New Section
         }
     }
 }
